@@ -1,0 +1,83 @@
+REGION,CONFIRMED_CASES,DEATHS,RISK_LEVEL,Code
+Mainland China,"80,269","2,981",Avoid travel,CHN
+South Korea,"5,621",28,Avoid travel,KOR
+Iran,"2,922",92,Avoid travel,IRN
+Italy,"2,502",79,Avoid travel,ITA
+Japan,998,8,Reconsider,JPN
+France,257,4,,FRA
+Germany,244,0,,DEU
+Spain,193,1,,ESP
+United States,118,9,,USA
+Singapore,110,0,,SGP
+Hong Kong,102,2,Be careful,HKG
+Switzerland,93,0,,CHE
+UK,85,0,,GBR
+Kuwait,56,0,,KWT
+Malaysia,50,0,,MYS
+Bahrain,49,0,,BHR
+Thailand,43,1,,THA
+Taiwan,42,1,,TWN
+Australia,41,1,,AUS
+Netherlands,38,0,,NLD
+Sweden,35,0,,SWE
+Iraq,32,1,,IRQ
+Norway,32,0,,NOR
+Canada,31,0,,CAN
+India,28,0,,IND
+United Arab Emirates,27,0,,ARE
+Austria,27,0,,AUT
+Belgium,23,0,,BEL
+Iceland,16,0,,ISL
+Vietnam,16,0,,VNM
+San Marino,15,1,,SMR
+Israel,15,0,,ISR
+Lebanon,13,0,,LBN
+Oman,12,0,,OMN
+Denmark,10,0,,DNK
+Macau,10,0,,MAC
+Croatia,9,0,,HRV
+Greece,8,0,,GRC
+Qatar,8,0,,QAT
+Ecuador,7,0,,ECU
+Belarus,6,0,,BLR
+Finland,6,0,,FIN
+Czech Republic,5,0,,CZE
+Algeria,5,0,,DZA
+Mexico,5,0,,MEX
+Pakistan,5,0,,PAK
+Portugal,5,0,,PRT
+Romania,4,0,,ROU
+Philippines,3,1,,PHL
+Azerbaijan,3,0,,AZE
+Georgia,3,0,,GEO
+New Zealand,3,0,,NZL
+Russia,3,0,,RUS
+Saint Barthelemy,3,0,,BLM
+Andorra,2,0,,AND
+Andorra,2,0,,AND
+Brazil,2,0,,BRA
+Egypt,2,0,,EGY
+Senegal,2,0,,SEN
+Indonesia,2,0,,IDN
+Afghanistan,1,0,,AFG
+Armenia,1,0,,ARM
+Argentina,1,0,,ARG
+Chile,1,0,,CHL
+Dominican Republic,1,0,,DOM
+Jordan,1,0,,JOR
+Cambodia,1,0,,KHM
+Sri Lanka,1,0,,LKA
+Lithuania,1,0,,LTU
+Luxembourg,1,0,,LUX
+Monaco,1,0,,MCO
+North Macedonia,1,0,,MKD
+Nigeria,1,0,,NGA
+Nepal,1,0,,NPL
+Ukraine,1,0,,UKR
+Latvia,1,0,,LVA
+Saudi Arabia,1,0,,SAU
+Gibraltar,1,0,,GIB
+Morocco,1,0,,MAR
+Tunisia,1,0,,TUN
+Liechtenstein,1,0,,LIE
+Poland,1,0,,POL
