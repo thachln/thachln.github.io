@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Close-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.64">
+        <g id="menu-chapter@multi-level" transform="translate(-338.000000, -31.000000)" fill-rule="nonzero">
+            <g id="Close-icon" transform="translate(335.000000, 28.000000)">
+                <rect id="Rectangle-12" opacity="0.861049107" x="0" y="0" width="24" height="24"></rect>
+                <path d="M5,19 L19,5" id="Path-2" stroke="#3D3D3D" stroke-width="2.8" stroke-linecap="round"></path>
+                <path d="M5,5 L19,19" id="Path-3" stroke="#3D3D3D" stroke-width="2.8" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

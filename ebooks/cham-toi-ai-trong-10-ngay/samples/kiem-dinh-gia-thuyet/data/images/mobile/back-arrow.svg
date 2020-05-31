@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="21px" viewBox="0 0 13 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Loading" transform="translate(-12.000000, -32.000000)">
+            <g id="Bars/Navigation/Navigation-Bar">
+                <g id="Back-Arrow" transform="translate(12.000000, 31.000000)">
+                    <rect id="Rectangle-20" fill-rule="nonzero" x="0" y="0" width="24" height="24"></rect>
+                    <path d="M9.90638279,1.98994949 L0,11.5 L9.90638279,21.0100505 C10.482585,21.5632002 11.392592,21.5632002 11.9687943,21.0100505 L11.9687943,21.0100505 C12.5155283,20.4851901 12.5332603,19.6164912 12.0083999,19.0697572 C11.9954689,19.0562872 11.9822642,19.0430826 11.9687943,19.0301515 L4.12482294,11.5 L11.9687943,3.96984848 C12.5155283,3.44498808 12.5332603,2.57628917 12.0083999,2.02955517 C11.9954689,2.0160852 11.9822642,2.00288056 11.9687943,1.98994949 L11.9687943,1.98994949 C11.392592,1.43679982 10.482585,1.43679982 9.90638279,1.98994949 Z" id="Back" fill="#3D3D3D"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
