@@ -1,6 +1,6 @@
 // simple.js
 (async () => {
-  const loadingTask = PDFJS.getDocument("table1_compareGroups_createTable.pdf");
+  const loadingTask = PDFJS.getDocument("https://github.com/thachln/thachln.github.io/raw/master/ebooks/cham-toi-ai-trong-10-ngay/samples/table1_compareGroups_createTable.pdf");
   const pdf = await loadingTask.promise;
 
   // Load information from the first page.
