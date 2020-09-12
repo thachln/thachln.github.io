@@ -1,0 +1,404 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.260
+[MUSIC]
+
+2
+00:00:04.260 --> 00:00:07.184
+Hi, in this video, we're going to
+differentiate the two ways you document
+
+3
+00:00:07.184 --> 00:00:10.370
+functionality in a software
+requirement specification document.
+
+4
+00:00:10.370 --> 00:00:12.971
+The reason there are two ways to write
+these statements of what the system will
+
+5
+00:00:12.971 --> 00:00:14.906
+do is that there are two audiences for
+that information.
+
+6
+00:00:14.906 --> 00:00:18.416
+The first audience is the user or
+the client, depending on whether or
+
+7
+00:00:18.416 --> 00:00:20.000
+not they're the same person.
+
+8
+00:00:20.000 --> 00:00:22.600
+In many cases, the user isn't technical.
+
+9
+00:00:22.600 --> 00:00:24.994
+And so we'd have a very difficult time
+talking with you about what they want
+
+10
+00:00:24.994 --> 00:00:25.640
+the software to do.
+
+11
+00:00:25.640 --> 00:00:29.060
+They don't know the potential
+of what they can do.
+
+12
+00:00:29.060 --> 00:00:32.608
+But we still need to provide some
+sort information that explains
+
+13
+00:00:32.608 --> 00:00:34.118
+what the system will do, so
+
+14
+00:00:34.118 --> 00:00:38.191
+that the user is relatively assured
+that they get at the end what the client
+
+15
+00:00:38.191 --> 00:00:42.214
+is paid for and it actually does what
+the user or client wanted them to do.
+
+16
+00:00:42.214 --> 00:00:44.490
+The second audience is
+the developing team.
+
+17
+00:00:44.490 --> 00:00:47.790
+We also need to provide enough detail to
+allow the people making the solution,
+
+18
+00:00:47.790 --> 00:00:48.550
+making the code.
+
+19
+00:00:48.550 --> 00:00:50.560
+Know what the system should and
+shouldn't do.
+
+20
+00:00:50.560 --> 00:00:52.776
+Now, this is where things
+tend to get tricky.
+
+21
+00:00:52.776 --> 00:00:55.652
+We use natural language,
+primarily because it allows for
+
+22
+00:00:55.652 --> 00:00:58.540
+an easy communication
+protocol with our users.
+
+23
+00:00:58.540 --> 00:00:59.701
+Know or very little,
+
+24
+00:00:59.701 --> 00:01:03.450
+technical jargon should hopefully
+avoid some miscommunications.
+
+25
+00:01:03.450 --> 00:01:06.250
+But it's often not very precise.
+
+26
+00:01:06.250 --> 00:01:07.130
+Let me give you an example.
+
+27
+00:01:07.130 --> 00:01:10.810
+Imagine that you're talking with a street
+vendor, they're selling you drinks.
+
+28
+00:01:10.810 --> 00:01:11.876
+You ask what they have.
+
+29
+00:01:11.876 --> 00:01:15.620
+The merchant says, bottle of water or
+a cup of tea is a dollar.
+
+30
+00:01:15.620 --> 00:01:17.130
+You tell the merchant, I'll take both.
+
+31
+00:01:17.130 --> 00:01:20.000
+The merchant obliges and you put down
+a dollar, and start to walk away.
+
+32
+00:01:20.000 --> 00:01:22.490
+Does that sound right to you?
+
+33
+00:01:22.490 --> 00:01:24.680
+This is what's called an exclusive or.
+
+34
+00:01:24.680 --> 00:01:28.450
+The or in the case of the language here
+means one or the other, but not both.
+
+35
+00:01:28.450 --> 00:01:31.100
+How about this?
+
+36
+00:01:31.100 --> 00:01:34.935
+I tell you that if you pass all
+the quizzes or pass all the assignments,
+
+37
+00:01:34.935 --> 00:01:36.306
+then you pass the class.
+
+38
+00:01:36.306 --> 00:01:39.853
+You then pass all the quizzes and
+you pass all the assignments, and
+
+39
+00:01:39.853 --> 00:01:41.890
+I tell you that you failed the course.
+
+40
+00:01:42.900 --> 00:01:44.712
+You be a bit upset by that?
+
+41
+00:01:44.712 --> 00:01:46.519
+This is an exclusive or.
+
+42
+00:01:46.519 --> 00:01:50.152
+The or in this case means one or
+the other, or both and
+
+43
+00:01:50.152 --> 00:01:55.640
+then there's the problem of people
+saying and when they mean or.
+
+44
+00:01:55.640 --> 00:01:58.650
+The moral of this story is we need to be
+very careful of the language we use when
+
+45
+00:01:58.650 --> 00:02:00.320
+developing these statements.
+
+46
+00:02:00.320 --> 00:02:02.450
+So let's distinguish them a little bit.
+
+47
+00:02:02.450 --> 00:02:05.873
+User requirements are exactly what
+the user wants the solution to do in
+
+48
+00:02:05.873 --> 00:02:07.470
+the user’s language.
+
+49
+00:02:07.470 --> 00:02:10.900
+Users do not want to log in though,
+we want them to.
+
+50
+00:02:10.900 --> 00:02:14.836
+They want the system to be secured
+to only allow them to say,
+
+51
+00:02:14.836 --> 00:02:17.740
+post to Facebook on their behalf.
+
+52
+00:02:17.740 --> 00:02:20.340
+Logging in is the systems specification.
+
+53
+00:02:20.340 --> 00:02:23.860
+The required action of the system
+solution were developing.
+
+54
+00:02:23.860 --> 00:02:26.330
+System spec is the usually more precise or
+
+55
+00:02:26.330 --> 00:02:31.360
+constraining statement of how the system
+will meet the user requirements.
+
+56
+00:02:31.360 --> 00:02:34.568
+This is still with the solution
+we'll do not how, but
+
+57
+00:02:34.568 --> 00:02:37.506
+it's how the system will
+meet the requirement.
+
+58
+00:02:37.506 --> 00:02:41.041
+Software design then takes this
+requirement specification and details that
+
+59
+00:02:41.041 --> 00:02:45.080
+how, which modules be constructed will it
+be oriented toward design and development.
+
+60
+00:02:45.080 --> 00:02:47.400
+How do we make it happen?
+
+61
+00:02:47.400 --> 00:02:50.460
+This still may not be clear,
+so let’s take a quick example.
+
+62
+00:02:50.460 --> 00:02:51.716
+Take this user requirement.
+
+63
+00:02:51.716 --> 00:02:54.990
+We want to make a boat and
+sell to the general public.
+
+64
+00:02:54.990 --> 00:02:57.410
+We talked to some users to
+find out what they want, so
+
+65
+00:02:57.410 --> 00:02:59.840
+that we can build what they want so
+we can make money.
+
+66
+00:02:59.840 --> 00:03:03.480
+We can tell when a user can put
+our boat on a rack by themselves,
+
+67
+00:03:03.480 --> 00:03:07.890
+but how do we constrain and specify our
+solution to make sure that happens?
+
+68
+00:03:07.890 --> 00:03:11.624
+Because the generic statement, one person
+must be able to load the boat on a car
+
+69
+00:03:11.624 --> 00:03:15.350
+rack doesn't really give our
+design team anything to go on.
+
+70
+00:03:15.350 --> 00:03:18.620
+So we specify the solution in such a way
+that our specification means that we
+
+71
+00:03:18.620 --> 00:03:21.930
+have met the requirement here.
+
+72
+00:03:21.930 --> 00:03:24.440
+Now, we have at least a partial
+list of things we must meet.
+
+73
+00:03:24.440 --> 00:03:28.945
+And if we meet these things,
+we have met the user requirement or
+
+74
+00:03:28.945 --> 00:03:30.820
+at least we think we have.
+
+75
+00:03:30.820 --> 00:03:33.373
+This is another area of potential mistake.
+
+76
+00:03:33.373 --> 00:03:36.990
+Making assumptions about whether these
+specifications will translate about having
+
+77
+00:03:36.990 --> 00:03:37.950
+met the requirement.
+
+78
+00:03:37.950 --> 00:03:39.886
+So you need to take care that these and
+
+79
+00:03:39.886 --> 00:03:43.100
+only these are sufficient
+to meet the requirement.
+
+80
+00:03:43.100 --> 00:03:47.060
+So we assume that if the boat's lighter
+than 100 pounds that it has handles,
+
+81
+00:03:47.060 --> 00:03:49.520
+that one person can load
+it onto the car rack.
+
+82
+00:03:50.640 --> 00:03:53.610
+There is a slight, but important
+distinction between the requirements and
+
+83
+00:03:53.610 --> 00:03:58.150
+the specification and it's never quite
+as easy to distinguish them in reality.
+
+84
+00:03:58.150 --> 00:04:01.102
+Real world users may very well give
+you specification level detail.
+
+85
+00:04:01.102 --> 00:04:04.355
+So not all requirements need a lot
+of specification level detail to
+
+86
+00:04:04.355 --> 00:04:06.010
+refine the intent.
+
+87
+00:04:06.010 --> 00:04:07.180
+But a lot of time,
+it does need that requirement.
