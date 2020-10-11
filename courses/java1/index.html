@@ -1,2084 +1,233 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:w="urn:schemas-microsoft-com:office:word"
-xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
-xmlns="http://www.w3.org/TR/REC-html40">
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=ProgId content=Word.Document>
-<meta name=Generator content="Microsoft Word 15">
-<meta name=Originator content="Microsoft Word 15">
-<link rel=File-List href="index_files/filelist.xml">
-<title>Bắt đầu phát triển ứng dụng với Java - cấp độ 1</title>
-<!--[if gte mso 9]><xml>
- <o:DocumentProperties>
-  <o:Subject>Để trở thành lập trình viên Java</o:Subject>
-  <o:Author>ThachLN</o:Author>
-  <o:Keywords>Version 0.9</o:Keywords>
-  <o:Description>http://mks.com.vn/basic-testing</o:Description>
-  <o:Template>Gioi thieu khoa hoc template.dotx</o:Template>
-  <o:LastAuthor>Thach Le</o:LastAuthor>
-  <o:Revision>2</o:Revision>
-  <o:TotalTime>15</o:TotalTime>
-  <o:LastPrinted>2020-10-11T03:50:00Z</o:LastPrinted>
-  <o:Created>2020-10-11T04:09:00Z</o:Created>
-  <o:LastSaved>2020-10-11T04:09:00Z</o:LastSaved>
-  <o:Pages>1</o:Pages>
-  <o:Words>651</o:Words>
-  <o:Characters>2618</o:Characters>
-  <o:Company>Kế hoạch bài giảng</o:Company>
-  <o:Lines>67</o:Lines>
-  <o:Paragraphs>65</o:Paragraphs>
-  <o:CharactersWithSpaces>3204</o:CharactersWithSpaces>
-  <o:Version>16.00</o:Version>
- </o:DocumentProperties>
- <o:OfficeDocumentSettings>
-  <o:RelyOnVML/>
-  <o:AllowPNG/>
- </o:OfficeDocumentSettings>
-</xml><![endif]-->
-<link rel=dataStoreItem href="index_files/item0001.xml"
-target="index_files/props002.xml">
-<link rel=themeData href="index_files/themedata.thmx">
-<link rel=colorSchemeMapping href="index_files/colorschememapping.xml">
-<!--[if gte mso 9]><xml>
- <w:WordDocument>
-  <w:TrackMoves>false</w:TrackMoves>
-  <w:TrackFormatting/>
-  <w:PunctuationKerning/>
-  <w:DrawingGridHorizontalSpacing>5.5 pt</w:DrawingGridHorizontalSpacing>
-  <w:DisplayHorizontalDrawingGridEvery>2</w:DisplayHorizontalDrawingGridEvery>
-  <w:ValidateAgainstSchemas/>
-  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
-  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
-  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
-  <w:DoNotPromoteQF/>
-  <w:LidThemeOther>EN-US</w:LidThemeOther>
-  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
-  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
-  <w:Compatibility>
-   <w:BreakWrappedTables/>
-   <w:SnapToGridInCell/>
-   <w:WrapTextWithPunct/>
-   <w:UseAsianBreakRules/>
-   <w:DontGrowAutofit/>
-   <w:SplitPgBreakAndParaMark/>
-   <w:EnableOpenTypeKerning/>
-   <w:DontFlipMirrorIndents/>
-   <w:OverrideTableStyleHps/>
-  </w:Compatibility>
-  <m:mathPr>
-   <m:mathFont m:val="Cambria Math"/>
-   <m:brkBin m:val="before"/>
-   <m:brkBinSub m:val="&#45;-"/>
-   <m:smallFrac m:val="off"/>
-   <m:dispDef/>
-   <m:lMargin m:val="0"/>
-   <m:rMargin m:val="0"/>
-   <m:defJc m:val="centerGroup"/>
-   <m:wrapIndent m:val="1440"/>
-   <m:intLim m:val="subSup"/>
-   <m:naryLim m:val="undOvr"/>
-  </m:mathPr></w:WordDocument>
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
-  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
-  LatentStyleCount="376">
-  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
-  <w:LsdException Locked="false" Priority="0" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
-  <w:LsdException Locked="false" Priority="0" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 6"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 7"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 8"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 9"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 1"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 2"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 3"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 4"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 5"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 6"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 7"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 8"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 9"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Normal Indent"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="footnote text"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="annotation text"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="header"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="footer"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index heading"/>
-  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="table of figures"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="envelope address"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="envelope return"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="footnote reference"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="annotation reference"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="line number"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="page number"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="endnote reference"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="endnote text"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="table of authorities"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="macro"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="toa heading"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Bullet"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Number"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Bullet 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Bullet 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Bullet 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Bullet 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Number 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Number 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Number 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Number 5"/>
-  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Closing"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Signature"/>
-  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
-   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text Indent"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Continue"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Continue 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Continue 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Continue 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Continue 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Message Header"/>
-  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Salutation"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Date"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text First Indent"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text First Indent 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Note Heading"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text Indent 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text Indent 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Block Text"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Hyperlink"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="FollowedHyperlink"/>
-  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
-  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Document Map"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Plain Text"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="E-mail Signature"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Top of Form"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Bottom of Form"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Normal (Web)"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Acronym"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Address"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Cite"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Code"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Definition"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Keyboard"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Preformatted"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Sample"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Typewriter"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Variable"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Normal Table"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="annotation subject"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="No List"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Outline List 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Outline List 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Outline List 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Simple 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Simple 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Simple 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Classic 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Classic 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Classic 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Classic 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Colorful 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Colorful 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Colorful 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Columns 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Columns 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Columns 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Columns 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Columns 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 6"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 7"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 8"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 6"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 7"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 8"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table 3D effects 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table 3D effects 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table 3D effects 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Contemporary"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Elegant"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Professional"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Subtle 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Subtle 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Web 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Web 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Web 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Balloon Text"/>
-  <w:LsdException Locked="false" Priority="59" Name="Table Grid"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Theme"/>
-  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
-  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
-  <w:LsdException Locked="false" Priority="34" QFormat="true"
-   Name="List Paragraph"/>
-  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
-  <w:LsdException Locked="false" Priority="30" QFormat="true"
-   Name="Intense Quote"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
-  <w:LsdException Locked="false" Priority="19" QFormat="true"
-   Name="Subtle Emphasis"/>
-  <w:LsdException Locked="false" Priority="21" QFormat="true"
-   Name="Intense Emphasis"/>
-  <w:LsdException Locked="false" Priority="31" QFormat="true"
-   Name="Subtle Reference"/>
-  <w:LsdException Locked="false" Priority="32" QFormat="true"
-   Name="Intense Reference"/>
-  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
-  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
-   UnhideWhenUsed="true" Name="Bibliography"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
-  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
-  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
-  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
-  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
-  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
-  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
-  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
-  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
-  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="Grid Table 1 Light Accent 1"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="Grid Table 6 Colorful Accent 1"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="Grid Table 7 Colorful Accent 1"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="Grid Table 1 Light Accent 2"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="Grid Table 6 Colorful Accent 2"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="Grid Table 7 Colorful Accent 2"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="Grid Table 1 Light Accent 3"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="Grid Table 6 Colorful Accent 3"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="Grid Table 7 Colorful Accent 3"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="Grid Table 1 Light Accent 4"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="Grid Table 6 Colorful Accent 4"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="Grid Table 7 Colorful Accent 4"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="Grid Table 1 Light Accent 5"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="Grid Table 6 Colorful Accent 5"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="Grid Table 7 Colorful Accent 5"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="Grid Table 1 Light Accent 6"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="Grid Table 6 Colorful Accent 6"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="Grid Table 7 Colorful Accent 6"/>
-  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
-  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
-  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="List Table 1 Light Accent 1"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="List Table 6 Colorful Accent 1"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="List Table 7 Colorful Accent 1"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="List Table 1 Light Accent 2"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="List Table 6 Colorful Accent 2"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="List Table 7 Colorful Accent 2"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="List Table 1 Light Accent 3"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="List Table 6 Colorful Accent 3"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="List Table 7 Colorful Accent 3"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="List Table 1 Light Accent 4"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="List Table 6 Colorful Accent 4"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="List Table 7 Colorful Accent 4"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="List Table 1 Light Accent 5"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="List Table 6 Colorful Accent 5"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="List Table 7 Colorful Accent 5"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="List Table 1 Light Accent 6"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="List Table 6 Colorful Accent 6"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="List Table 7 Colorful Accent 6"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Mention"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Smart Hyperlink"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Hashtag"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Unresolved Mention"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Smart Link"/>
- </w:LatentStyles>
-</xml><![endif]-->
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;
-	mso-font-charset:2;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:0 268435456 0 0 -2147483648 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:roman;
-	mso-font-pitch:variable;
-	mso-font-signature:3 0 0 0 1 0;}
-@font-face
-	{font-family:Cambria;
-	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:roman;
-	mso-font-pitch:variable;
-	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
-@font-face
-	{font-family:Candara;
-	panose-1:2 14 5 2 3 3 3 2 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:swiss;
-	mso-font-pitch:variable;
-	mso-font-signature:-1610611985 1073783883 0 0 415 0;}
-@font-face
-	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:swiss;
-	mso-font-pitch:variable;
-	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
-@font-face
-	{font-family:VNI-Helve;
-	mso-font-charset:0;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:3 0 0 0 1 0;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{mso-style-name:"Normal\,body text";
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:"";
-	margin:0cm;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	font-family:"Candara",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	mso-no-proof:yes;}
-h1
-	{mso-style-priority:9;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-link:"Heading 1 Char";
-	mso-style-next:"Normal\,body text";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:3.0pt;
-	margin-left:0cm;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:1;
-	font-size:16.0pt;
-	font-family:"Cambria",serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	mso-font-kerning:16.0pt;
-	mso-no-proof:yes;}
-h2
-	{mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:"Heading 1";
-	mso-style-link:"Heading 2 Char";
-	mso-style-next:"Normal\,body text";
-	margin-top:20.0pt;
-	margin-right:0cm;
-	margin-bottom:18.0pt;
-	margin-left:0cm;
-	line-height:105%;
-	mso-pagination:widow-orphan;
-	mso-outline-level:2;
-	border:none;
-	mso-border-bottom-alt:solid gray .5pt;
-	mso-border-bottom-themecolor:background1;
-	mso-border-bottom-themeshade:128;
-	padding:0cm;
-	mso-padding-alt:0cm 0cm 1.0pt 0cm;
-	font-size:16.0pt;
-	font-family:"Candara",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:Arial;
-	color:#FF6600;
-	text-transform:uppercase;
-	letter-spacing:1.0pt;
-	mso-font-kerning:12.0pt;
-	mso-bidi-font-weight:normal;}
-h5
-	{mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-link:"Heading 5 Char";
-	mso-style-next:"Normal\,body text";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:5;
-	font-size:14.0pt;
-	mso-bidi-font-size:12.0pt;
-	font-family:"Candara",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:Arial;
-	color:#FF6600;
-	mso-no-proof:yes;}
-p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-link:"Comment Text Char";
-	margin:0cm;
-	mso-pagination:widow-orphan;
-	font-size:10.0pt;
-	font-family:"Candara",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	mso-no-proof:yes;}
-p.MsoHeader, li.MsoHeader, div.MsoHeader
-	{mso-style-priority:99;
-	mso-style-link:"Header Char";
-	margin:0cm;
-	mso-pagination:widow-orphan;
-	tab-stops:center 234.0pt right 468.0pt;
-	font-size:12.0pt;
-	font-family:"Candara",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	mso-no-proof:yes;}
-p.MsoFooter, li.MsoFooter, div.MsoFooter
-	{mso-style-priority:99;
-	mso-style-link:"Footer Char";
-	margin:0cm;
-	mso-pagination:widow-orphan;
-	tab-stops:center 234.0pt right 468.0pt;
-	font-size:12.0pt;
-	font-family:"Candara",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	mso-no-proof:yes;}
-span.MsoCommentReference
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-ansi-font-size:8.0pt;
-	mso-bidi-font-size:8.0pt;}
-a:link, span.MsoHyperlink
-	{mso-style-priority:99;
-	color:blue;
-	mso-themecolor:hyperlink;
-	text-decoration:underline;
-	text-underline:single;}
-a:visited, span.MsoHyperlinkFollowed
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	color:purple;
-	mso-themecolor:followedhyperlink;
-	text-decoration:underline;
-	text-underline:single;}
-p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-link:"Document Map Char";
-	margin:0cm;
-	mso-pagination:widow-orphan;
-	font-size:8.0pt;
-	font-family:"Tahoma",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	mso-no-proof:yes;}
-p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-parent:"Comment Text";
-	mso-style-link:"Comment Subject Char";
-	mso-style-next:"Comment Text";
-	margin:0cm;
-	mso-pagination:widow-orphan;
-	font-size:10.0pt;
-	font-family:"Candara",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	font-weight:bold;
-	mso-no-proof:yes;}
-p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-link:"Balloon Text Char";
-	margin:0cm;
-	mso-pagination:widow-orphan;
-	font-size:8.0pt;
-	font-family:"Tahoma",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	mso-no-proof:yes;}
-p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
-	{mso-style-priority:1;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:"";
-	mso-style-link:"No Spacing Char";
-	margin:0cm;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:minor-fareast;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	margin-top:6.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:35.7pt;
-	text-indent:-17.85pt;
-	mso-pagination:widow-orphan;
-	mso-list:l0 level1 lfo8;
-	font-size:12.0pt;
-	font-family:"Candara",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	mso-no-proof:yes;}
-span.HeaderChar
-	{mso-style-name:"Header Char";
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:Header;}
-span.FooterChar
-	{mso-style-name:"Footer Char";
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:Footer;}
-span.BalloonTextChar
-	{mso-style-name:"Balloon Text Char";
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:"Balloon Text";
-	mso-ansi-font-size:8.0pt;
-	mso-bidi-font-size:8.0pt;
-	font-family:"Tahoma",sans-serif;
-	mso-ascii-font-family:Tahoma;
-	mso-hansi-font-family:Tahoma;
-	mso-bidi-font-family:Tahoma;}
-span.NoSpacingChar
-	{mso-style-name:"No Spacing Char";
-	mso-style-priority:1;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:"No Spacing";
-	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:minor-fareast;}
-span.Heading2Char
-	{mso-style-name:"Heading 2 Char";
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:"Heading 2";
-	mso-ansi-font-size:16.0pt;
-	mso-bidi-font-size:16.0pt;
-	font-family:"Candara",sans-serif;
-	mso-ascii-font-family:Candara;
-	mso-fareast-font-family:"Times New Roman";
-	mso-hansi-font-family:Candara;
-	mso-bidi-font-family:Arial;
-	color:#FF6600;
-	text-transform:uppercase;
-	letter-spacing:1.0pt;
-	mso-font-kerning:12.0pt;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-span.Heading5Char
-	{mso-style-name:"Heading 5 Char";
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:"Heading 5";
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:12.0pt;
-	font-family:"Candara",sans-serif;
-	mso-ascii-font-family:Candara;
-	mso-fareast-font-family:"Times New Roman";
-	mso-hansi-font-family:Candara;
-	mso-bidi-font-family:Arial;
-	color:#FF6600;
-	font-weight:bold;
-	mso-no-proof:yes;}
-span.Heading1Char
-	{mso-style-name:"Heading 1 Char";
-	mso-style-priority:9;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:"Heading 1";
-	mso-ansi-font-size:16.0pt;
-	mso-bidi-font-size:16.0pt;
-	font-family:"Cambria",serif;
-	mso-ascii-font-family:Cambria;
-	mso-fareast-font-family:"Times New Roman";
-	mso-hansi-font-family:Cambria;
-	mso-bidi-font-family:"Times New Roman";
-	mso-font-kerning:16.0pt;
-	font-weight:bold;
-	mso-no-proof:yes;}
-p.bullet1, li.bullet1, div.bullet1
-	{mso-style-name:bullet1;
-	mso-style-unhide:no;
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:18.0pt;
-	text-indent:-18.0pt;
-	mso-pagination:widow-orphan;
-	mso-list:l6 level1 lfo2;
-	tab-stops:list 18.0pt;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:VNI-Helve;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	mso-ansi-language:EN-GB;
-	mso-no-proof:yes;}
-span.DocumentMapChar
-	{mso-style-name:"Document Map Char";
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:"Document Map";
-	mso-ansi-font-size:8.0pt;
-	mso-bidi-font-size:8.0pt;
-	font-family:"Tahoma",sans-serif;
-	mso-ascii-font-family:Tahoma;
-	mso-fareast-font-family:"Times New Roman";
-	mso-hansi-font-family:Tahoma;
-	mso-bidi-font-family:Tahoma;
-	color:#595959;
-	mso-themecolor:text1;
-	mso-themetint:166;
-	mso-no-proof:yes;}
-span.CommentTextChar
-	{mso-style-name:"Comment Text Char";
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:"Comment Text";
-	mso-ansi-font-size:10.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Candara",sans-serif;
-	mso-ascii-font-family:Candara;
-	mso-fareast-font-family:"Times New Roman";
-	mso-hansi-font-family:Candara;
-	mso-bidi-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	mso-no-proof:yes;}
-span.CommentSubjectChar
-	{mso-style-name:"Comment Subject Char";
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-parent:"Comment Text Char";
-	mso-style-link:"Comment Subject";
-	mso-ansi-font-size:10.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Candara",sans-serif;
-	mso-ascii-font-family:Candara;
-	mso-fareast-font-family:"Times New Roman";
-	mso-hansi-font-family:Candara;
-	mso-bidi-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	font-weight:bold;
-	mso-no-proof:yes;}
-p.Day, li.Day, div.Day
-	{mso-style-name:Day;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-link:"Day Char";
-	margin-top:6.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:0cm;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	font-family:"Candara",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	mso-no-proof:yes;}
-span.DayChar
-	{mso-style-name:"Day Char";
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:Day;
-	mso-ansi-font-size:12.0pt;
-	mso-bidi-font-size:12.0pt;
-	font-family:"Candara",sans-serif;
-	mso-ascii-font-family:Candara;
-	mso-fareast-font-family:"Times New Roman";
-	mso-hansi-font-family:Candara;
-	mso-bidi-font-family:"Times New Roman";
-	color:black;
-	mso-themecolor:text1;
-	mso-no-proof:yes;}
-.MsoChpDefault
-	{mso-style-type:export-only;
-	mso-default-props:yes;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
-.MsoPapDefault
-	{mso-style-type:export-only;
-	margin-bottom:10.0pt;
-	line-height:115%;}
- /* Page Definitions */
- @page
-	{mso-footnote-separator:url("index_files/header.html") fs;
-	mso-footnote-continuation-separator:url("index_files/header.html") fcs;
-	mso-endnote-separator:url("index_files/header.html") es;
-	mso-endnote-continuation-separator:url("index_files/header.html") ecs;}
-@page WordSection1
-	{size:21.0cm 841.95pt;
-	margin:42.55pt 72.0pt 72.0pt 72.0pt;
-	mso-header-margin:36.0pt;
-	mso-footer-margin:8.05pt;
-	mso-footer:url("index_files/header.html") f1;
-	mso-paper-source:0;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- @list l0
-	{mso-list-id:189926019;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-332266970 -470513202 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l0:level1
-	{mso-level-number-format:bullet;
-	mso-level-style-link:"List Paragraph";
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l0:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l0:level3
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l0:level4
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l0:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l0:level6
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l0:level7
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l0:level8
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l0:level9
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l1
-	{mso-list-id:214630478;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-879213782 420243502 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l1:level1
-	{mso-level-tab-stop:36.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l1:level2
-	{mso-level-number-format:alpha-lower;
-	mso-level-tab-stop:72.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l1:level3
-	{mso-level-number-format:roman-lower;
-	mso-level-tab-stop:108.0pt;
-	mso-level-number-position:right;
-	text-indent:-9.0pt;}
-@list l1:level5
-	{mso-level-number-format:alpha-lower;
-	mso-level-tab-stop:180.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l1:level6
-	{mso-level-number-format:roman-lower;
-	mso-level-tab-stop:216.0pt;
-	mso-level-number-position:right;
-	text-indent:-9.0pt;}
-@list l1:level8
-	{mso-level-number-format:alpha-lower;
-	mso-level-tab-stop:288.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l1:level9
-	{mso-level-number-format:roman-lower;
-	mso-level-tab-stop:324.0pt;
-	mso-level-number-position:right;
-	text-indent:-9.0pt;}
-@list l2
-	{mso-list-id:826554127;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-1985444628 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l2:level1
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l2:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l2:level3
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l2:level4
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l2:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l2:level6
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l2:level7
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l2:level8
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l2:level9
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l3
-	{mso-list-id:958494991;
-	mso-list-type:hybrid;
-	mso-list-template-ids:618418674 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l3:level1
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l3:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l3:level3
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l3:level4
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l3:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l3:level6
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l3:level7
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l3:level8
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l3:level9
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l4
-	{mso-list-id:971520688;
-	mso-list-type:hybrid;
-	mso-list-template-ids:1812374176 1565151242 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l4:level1
-	{mso-level-start-at:0;
-	mso-level-number-format:bullet;
-	mso-level-text:-;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:188.45pt;
-	text-indent:-18.0pt;
-	font-family:"Arial",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-ansi-font-weight:normal;}
-@list l4:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:224.45pt;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l4:level3
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:260.45pt;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l4:level4
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:296.45pt;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l4:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:332.45pt;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l4:level6
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:368.45pt;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l4:level7
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:404.45pt;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l4:level8
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:440.45pt;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l4:level9
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:476.45pt;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l5
-	{mso-list-id:1270624565;
-	mso-list-type:hybrid;
-	mso-list-template-ids:634835492 1565151242 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l5:level1
-	{mso-level-start-at:0;
-	mso-level-number-format:bullet;
-	mso-level-text:-;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Arial",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-ansi-font-weight:normal;}
-@list l5:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l5:level3
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l5:level4
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l5:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l5:level6
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l5:level7
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l5:level8
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l5:level9
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l6
-	{mso-list-id:1622031805;
-	mso-list-type:hybrid;
-	mso-list-template-ids:1628446064 977046122 1424396466 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l6:level1
-	{mso-level-number-format:bullet;
-	mso-level-style-link:bullet1;
-	mso-level-text:;
-	mso-level-tab-stop:18.0pt;
-	mso-level-number-position:left;
-	margin-left:18.0pt;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l6:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:72.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l6:level3
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:108.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l6:level4
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:144.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l6:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:180.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";
-	mso-bidi-font-family:"Times New Roman";}
-@list l6:level6
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:216.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l6:level7
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:252.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l6:level8
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:288.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";
-	mso-bidi-font-family:"Times New Roman";}
-@list l6:level9
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:324.0pt;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l7
-	{mso-list-id:2012104154;
-	mso-list-type:hybrid;
-	mso-list-template-ids:2040011262 -1549129568 1208549377 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l7:level1
-	{mso-level-tab-stop:18.0pt;
-	mso-level-number-position:left;
-	margin-left:18.0pt;
-	text-indent:-18.0pt;}
-@list l7:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:54.0pt;
-	mso-level-number-position:left;
-	margin-left:54.0pt;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l7:level3
-	{mso-level-number-format:roman-lower;
-	mso-level-tab-stop:90.0pt;
-	mso-level-number-position:right;
-	margin-left:90.0pt;
-	text-indent:-9.0pt;}
-@list l7:level4
-	{mso-level-tab-stop:126.0pt;
-	mso-level-number-position:left;
-	margin-left:126.0pt;
-	text-indent:-18.0pt;}
-@list l7:level5
-	{mso-level-number-format:alpha-lower;
-	mso-level-tab-stop:162.0pt;
-	mso-level-number-position:left;
-	margin-left:162.0pt;
-	text-indent:-18.0pt;}
-@list l7:level6
-	{mso-level-number-format:roman-lower;
-	mso-level-tab-stop:198.0pt;
-	mso-level-number-position:right;
-	margin-left:198.0pt;
-	text-indent:-9.0pt;}
-@list l7:level7
-	{mso-level-tab-stop:234.0pt;
-	mso-level-number-position:left;
-	margin-left:234.0pt;
-	text-indent:-18.0pt;}
-@list l7:level8
-	{mso-level-number-format:alpha-lower;
-	mso-level-tab-stop:270.0pt;
-	mso-level-number-position:left;
-	margin-left:270.0pt;
-	text-indent:-18.0pt;}
-@list l7:level9
-	{mso-level-number-format:roman-lower;
-	mso-level-tab-stop:306.0pt;
-	mso-level-number-position:right;
-	margin-left:306.0pt;
-	text-indent:-9.0pt;}
-@list l8
-	{mso-list-id:2128574801;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-440366276 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l8:level1
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l8:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l8:level3
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l8:level4
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l8:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l8:level6
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l8:level7
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l8:level8
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l8:level9
-	{mso-level-number-format:bullet;
-	mso-level-text:;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
-<!--[if gte mso 10]>
-<style>
- /* Style Definitions */
- table.MsoNormalTable
-	{mso-style-name:"Table Normal";
-	mso-tstyle-rowband-size:0;
-	mso-tstyle-colband-size:0;
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-parent:"";
-	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
-	mso-para-margin-top:0cm;
-	mso-para-margin-right:0cm;
-	mso-para-margin-bottom:10.0pt;
-	mso-para-margin-left:0cm;
-	line-height:115%;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
-table.MsoTableGrid
-	{mso-style-name:"Table Grid";
-	mso-tstyle-rowband-size:0;
-	mso-tstyle-colband-size:0;
-	mso-style-priority:59;
-	mso-style-unhide:no;
-	border:solid windowtext 1.0pt;
-	mso-border-alt:solid windowtext .5pt;
-	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
-	mso-border-insideh:.5pt solid windowtext;
-	mso-border-insidev:.5pt solid windowtext;
-	mso-para-margin:0cm;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
-</style>
-<![endif]--><!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext="edit" spidmax="2049"/>
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <o:shapelayout v:ext="edit">
-  <o:idmap v:ext="edit" data="1"/>
- </o:shapelayout></xml><![endif]-->
-</head>
-
-<body lang=EN-US link=blue vlink=purple style='tab-interval:36.0pt;word-wrap:
-break-word'>
-
-<div class=WordSection1>
-
-<div style='mso-element:para-border-div;border:none;border-bottom:solid gray 1.0pt;
-mso-border-bottom-themecolor:background1;mso-border-bottom-themeshade:128;
-mso-border-bottom-alt:solid gray .5pt;mso-border-bottom-themecolor:background1;
-mso-border-bottom-themeshade:128;padding:0cm 0cm 1.0pt 0cm'>
-
-<h2>Giới thiệu khóa học </h2>
-
-</div>
-
-<p class=MsoNormal><span style='mso-bidi-font-size:11.0pt;mso-bidi-font-family:
-Arial;color:#365F91'><o:p>&nbsp;</o:p></span></p>
-
-<h5>Chủ đề khóa học: <span style='color:black;mso-themecolor:text1'><span
-style='mso-spacerun:yes'> </span><a name="OLE_LINK1"></a><a name="OLE_LINK2"><span
-style='mso-bookmark:OLE_LINK1'>Phát triển ứng dụng Java – cấp độ 1</span></a></span><span
-style='mso-bookmark:OLE_LINK2'><span style='mso-bookmark:OLE_LINK1'></span></span></h5>
-
-<span style='mso-bookmark:OLE_LINK1'></span><span style='mso-bookmark:OLE_LINK2'></span>
-
-<p class=MsoNormal><o:p>&nbsp;</o:p></p>
-
-<h5>Thời lượng: <span style='color:black;mso-themecolor:text1'>80 giờ</span></h5>
-
-<p class=MsoNormal><o:p>&nbsp;</o:p></p>
-
-<h5>Đối tượng học viên</h5>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><span
-style='mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:Arial'>Khóa
-học này dành các sinh viên, học sinh, yêu thích lập trình muốn làm quen với
-ngôn ngữ lập trình Java.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><span
-style='mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:Arial'>Sinh
-viên đại học, Lập trình viên ít kinh nghiệm cũng có thể theo học.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><span
-style='mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:Arial'>Học
-viên không cần có kiến thức về lập trình. <o:p></o:p></span></p>
-
-<h5>Mô tả học viên</h5>
-
-<p class=MsoListParagraph style='mso-list:l0 level1 lfo8'><![if !supportLists]><span
-style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Có laptop. </p>
-
-<p class=MsoListParagraph style='mso-list:l0 level1 lfo8'><![if !supportLists]><span
-style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Yêu thích hoặc muốn trải nghiệm về lập trỉnh.</p>
-
-<h5 style='margin-top:6.0pt'>Mục tiêu khóa học</h5>
-
-<p class=MsoNormal>Mục tiêu chung của khóa học là giúp các bạn làm quen với
-Java hoặc ôn lại kiến thức Java, trải nghiệm cách làm các phần mềm Java đơn
-giản, rèn luyện dần các thói quen và kỹ năng tốt trong lập trình, khai phá tiềm
-năng lập trình.</p>
-
-<p class=MsoNormal><o:p>&nbsp;</o:p></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><b
-style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
-115%;mso-bidi-font-family:Arial;color:#FF6600;letter-spacing:1.0pt;mso-font-kerning:
-12.0pt;mso-no-proof:no'>Phương pháp đào tạo<o:p></o:p></span></b></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><span
-style='mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:Arial'>Giảng
-viên kiêm 3 vai trò: Giảng dạy (Teaching), Huấn luận (Training), Cố vấn
-(Mentoring) nhằm giúp học viên nắm được kiến thức, có kỹ năng và nhận được lời
-tư vấn phù hợp.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><b
-style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
-115%;mso-bidi-font-family:Arial;color:#FF6600;letter-spacing:1.0pt;mso-font-kerning:
-12.0pt;mso-no-proof:no'>Học phí<o:p></o:p></span></b></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><span
-style='mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:Arial'>2.9
-triệu / khóa (2 tháng).<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><span
-style='mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:Arial'>Cam
-kết làm được phần mềm như đã thiết kế trong nội dung. Học lại khóa sau miễn
-phía.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><span
-style='mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:Arial'>Giảm
-10% nếu đăng ký thêm khóa </span><b>Phát triển ứng dụng Java – cấp độ 2</b>.</p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><b>Giảm 10%
-nếu đăng ký trong tháng 10/2020. Giảm thêm 10% cho nhóm 5 bạn.</b><b><span
-style='mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:Arial'><o:p></o:p></span></b></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><b
-style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
-115%;mso-bidi-font-family:Arial;color:#FF6600;letter-spacing:1.0pt;mso-font-kerning:
-12.0pt;mso-no-proof:no'>Khai giảng<o:p></o:p></span></b></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><span
-style='mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:Arial'>Khai
-giảng: <b>19</b> giờ, ngày <b>16/11/2020</b><o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><span
-style='mso-bidi-font-size:11.0pt;line-height:115%;mso-bidi-font-family:Arial'>Địa
-điểm: <b>Javi Coffee </b></span><b><span style='font-size:10.5pt;line-height:
-115%;font-family:"Arial",sans-serif;color:#222222;background:white'>13 đường 7,
-Khu phố 5, Thủ Đức, HCM (Sau lương trình ĐH SPKT)<o:p></o:p></span></b></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;line-height:115%'><b
-style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
-115%;mso-bidi-font-family:Arial;color:#FF6600;letter-spacing:1.0pt;mso-font-kerning:
-12.0pt;mso-no-proof:no'>Nội dung<o:p></o:p></span></b></p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Ôn tập về nguyên tắc vận hành của hệ điều hành,
-nguyên tắc hoạt động của chương trình máy tính.</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Trải nghiệm và giải thích chương trình đơn giản
-trên hệ điều hành Windows</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Ôn tập về cách thức hoạt động của phần mềm trên
-nền tảng mạng Internet.</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Trải nghiệm và giải thích chương trình chạy tren
-nền tảng mạng Internet. </p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Làm quen với công nghệ lập trình, ngôn ngữ lập
-trình Java.</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Phát triển ứng dụng trên Windows với thư viện
-SWT (của IBM)</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Làm quen với kiến trúc ứng dụng trên nền tảng
-Internet.</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Phát triển ứng dụng trên nền tảng Internet với
-công nghệ Java, Servlet; MySQL</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>[Nâng cao – dành cho học viên có năng lực vượt
-trội]:</p>
-
-<p class=MsoListParagraph style='margin-left:72.0pt;text-indent:-18.0pt;
-mso-list:l8 level2 lfo9'><![if !supportLists]><span style='font-family:"Courier New";
-mso-fareast-font-family:"Courier New"'><span style='mso-list:Ignore'>o<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]>Phát
-triển ứng dụng với Bootstrap, Spring, MySQL</p>
-
-<p class=MsoListParagraph style='margin-left:72.0pt;text-indent:-18.0pt;
-mso-list:l8 level2 lfo9'><![if !supportLists]><span style='font-family:"Courier New";
-mso-fareast-font-family:"Courier New"'><span style='mso-list:Ignore'>o<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]>Kiểm
-soát chất lượng mã nguồn bằng Unit Testing</p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
-margin-left:0cm;line-height:115%'><b style='mso-bidi-font-weight:normal'><span
-style='font-size:14.0pt;line-height:115%;mso-bidi-font-family:Arial;color:#FF6600;
-letter-spacing:1.0pt;mso-font-kerning:12.0pt;mso-no-proof:no'>Nội dung khóa
-Phát triển ứng dụng Java – cấp độ 2<o:p></o:p></span></b></p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Trải nghiệm và khai thác thư viện lập trình JDK.</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Ôn tập và trải nghiệm phương pháp lập trình
-hướng đối tượng (OOP)</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Nâng cao kỹ năng lập trình với ứng dụng trên
-Windows với thư viện SWT (của IBM)</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Nâng cao kỹ năng lập trình với ứng dụng trên nền
-tảng Internet với công nghệ Java, Servlet; MySQL.</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Phát triển ứng dụng Internet với Springboot,
-Boostrap, Thymeleaf.</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Làm quen với lập trình API Restful, micro
-services</p>
-
-<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-18.0pt;
-mso-list:l8 level1 lfo9'><![if !supportLists]><span style='font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>[Nâng cao – dành cho học viên có năng lực vượt
-trội]:</p>
-
-<p class=MsoListParagraph style='margin-left:72.0pt;text-indent:-18.0pt;
-mso-list:l8 level2 lfo9'><![if !supportLists]><span style='font-family:"Courier New";
-mso-fareast-font-family:"Courier New"'><span style='mso-list:Ignore'>o<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]>Phát
-triển ứng dụng với mô hình MVC</p>
-
-<p class=MsoListParagraph style='margin-left:72.0pt;text-indent:-18.0pt;
-mso-list:l8 level2 lfo9'><![if !supportLists]><span style='font-family:"Courier New";
-mso-fareast-font-family:"Courier New"'><span style='mso-list:Ignore'>o<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]>Kiểm
-soát chất lượng mã nguồn bằng Checkstyle, Unit Testing</p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:10.0pt;
-margin-left:0cm;line-height:115%'><b style='mso-bidi-font-weight:normal'><span
-style='font-size:14.0pt;line-height:115%;mso-bidi-font-family:Arial;color:#FF6600;
-letter-spacing:1.0pt;mso-font-kerning:12.0pt;mso-no-proof:no'>Học phí khóa Phát
-triển ứng dụng Java – cấp độ 2<o:p></o:p></span></b></p>
-
-<p class=MsoNormal><b>2.9 triệu /khóa (2 tháng).<o:p></o:p></b></p>
-
-<p class=MsoNormal><b>Cam kết đầu ra, học lại miễn phí trong khóa tiếp theo<o:p></o:p></b></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:10.0pt;
-margin-left:0cm;line-height:115%'><b style='mso-bidi-font-weight:normal'><span
-style='font-size:14.0pt;line-height:115%;mso-bidi-font-family:Arial;color:#FF6600;
-letter-spacing:1.0pt;mso-font-kerning:12.0pt;mso-no-proof:no'>Liên hệ: </span></b>Lê
-Ngọc Thạch, điện thoại 0977548358; Facebook: facebook.com/ThachLN</p>
-
-<p class=MsoNormal style='margin-top:6.0pt'><b>Vài nét giới thiệu</b>: 20 năm
-làm việc trong lĩnh vực phát triển phần mềm. Trong đó có 10 năm hỗ trợ, chia sẻ
-kinh nghiệm với các trường đại học; giảng viên thỉnh giảng thêm cho các trường
-ĐH FPT, ĐH SPKT, ĐH Tôn Đức Thắng.</p>
-
-<p class=MsoNormal>Tác giả ebook &quot;Chạm tới AI trong 10 ngày&quot; được
-thới thiệu tại trang:</p>
-
-<p class=MsoNormal align=center style='text-align:center'><a
-href="https://ThachLN.github.io"><b>https://ThachLN.github.io</b></a><b><o:p></o:p></b></p>
-
-<p class=MsoNormal>Phương châm: <b>Learning is to build your own assets</b> (<i>Học
-tập là để gầy dựng tài sản cho chính cá nhân bạn</i>)</p>
-
-</div>
-
-</body>
-
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Lập trình Java cho người mới bắt đầu">
+    <meta name="keywords" content="Java Programmer, Java Developer, Lập trình Java, Viết ứng dụng với Java">
+    <meta name="author" content="Le Ngoc Thach">
+    <title>Chương trình đào tạo Bắt đầu làm phần mềm với Java</title>
+    <link rel="apple-touch-icon" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CMuli:300,400,500,700" rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/css/charts/morris.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/css/extensions/unslider.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/css/weather-icons/climacons.min.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN ROBUST CSS-->
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/css/app.min.css">
+    <!-- END ROBUST CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/css/core/menu/menu-types/vertical-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/css/core/colors/palette-gradient.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/css/core/colors/palette-gradient.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/css/plugins/calendars/clndr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/fonts/meteocons/style.min.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <!-- <link rel="stylesheet" type="text/css" href="https://pixinvent.com/bootstrap-admin-template/robust/assets/css/style.css"> -->
+    <!-- END Custom CSS-->
+
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <link href='/mystyle.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns" data-open="click" data-menu="vertical-menu" data-col="2-columns">
+
+
+
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+
+    <div class="app-content content">
+      <div class="content-wrapper">
+        <div class="content-header row">
+          <div class="content-header-left col-md-6 col-12 mb-2">
+            <h3 class="content-header-title">Chương trình đào tạo</h3>
+            <div class="row breadcrumbs-top">
+              <div class="breadcrumb-wrapper col-12">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Phần mềm</a>
+                  </li>
+                  <li class="breadcrumb-item active"><a href="#">Làm phần mềm với Java</a>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="content-header-right col-md-6 col-12">
+            <fieldset class="form-group relative has-icon-left col-md-5 col-12 float-right p-0">
+              
+              <div class="alert alert-primary" role="alert">
+                <a href="https://thachln.github.io/ebooks/cham-toi-ai-trong-10-ngay.html" target="_blank" class="btn bg-gradient-directional-red white btn-purple btn-glow px-2">eBook: Chạm tới AI trong 10 ngày</a>.
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div class="content-body"><!--Grid options-->
+<section id="grid-options" class="row">
+	<div class="col-md-9">
+		<div class="card">
+			<div class="card-header">
+				<h4 class="card-title">📣📣 Chương trình huấn luyện làm được phần mềm với Java sau 2 tháng</h4>
+				<a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+				<div class="heading-elements">
+					<ul class="list-inline mb-0">
+						<li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+						<li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+						<li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+						<li><a data-action="close"><i class="ft-x"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="card-content">
+				<div class="card-body">
+          <ul class="list-group list">
+            <li class="list-group-item">
+              <h3 class="name">Chủ đề khóa học: Phát triển ứng dụng Java – cấp độ 1</h3>
+            </li>
+            <li class="list-group-item">
+              <h3 class="name">Thời lượng: 80 giờ</h3>
+            </li>
+            <li class="list-group-item">
+              <h3 class="name">Đối tượng học viên</h3>
+              <p class="born">Khóa học này dành các sinh viên, học sinh, yêu thích lập trình muốn làm quen với ngôn ngữ lập trình Java.</p>
+              <p class="born">Sinh viên đại học, Lập trình viên ít kinh nghiệm cũng có thể theo học.</p>
+              <p class="born">Học viên không cần có kiến thức về lập trình.</p>
+            </li>
+            <li class="list-group-item">
+              <h3 class="name">Yêu cầu học viên</h3>
+              <p class="born">Khuyến khích mang theo laptop</p>
+              <p class="born">Yêu thích hoặc muốn trải nghiệm về lập trỉnh.</p>
+            </li>
+            <li class="list-group-item">
+              <h3 class="name">Mục tiêu khóa học</h3>
+              <p class="born">Mục tiêu chung của khóa học là giúp các bạn làm quen với Java hoặc ôn lại kiến thức Java, trải nghiệm cách làm các phần mềm Java đơn giản, rèn luyện dần các thói quen và kỹ năng tốt trong lập trình, khai phá tiềm năng lập trình.</p>
+            </li>
+            <li class="list-group-item">
+              <h3 class="name">Phương pháp đào tạo</h3>
+              <p class="born">Giảng viên kiêm 3 vai trò: Giảng dạy (Teaching), Huấn luận (Training), Cố vấn (Mentoring) nhằm giúp học viên nắm được kiến thức, có kỹ năng và nhận được lời tư vấn phù hợp.</p>
+            </li>
+            <li class="list-group-item">
+              <h3 class="name">Học phí</h3>
+              <p class="born">2.9 triệu / khóa (2 tháng)</p>
+              <p class="born">Cam kết làm được phần mềm như đã thiết kế trong nội dung. Học lại khóa sau miễn phí.</p>
+              <p class="born">Giảm 10% nếu đăng ký thêm khóa Phát triển ứng dụng Java – cấp độ 2.</p>
+              <p class="born">Giảm thêm 10% nếu đăng ký trong tháng 10/2020. Giảm thêm 10% cho nhóm 5 bạn.</p>
+              
+            </li>
+            <li class="list-group-item">
+              <h3 class="name">Khai giảng</h3>
+              <p class="born">Khai giảng: 19 giờ, ngày 16/11/2020</p>
+              <p class="born">Địa điểm: Javi Coffee 13 đường 7, Khu phố 5, Thủ Đức, HCM (Sau lưng trường ĐH SPKT)</p>
+            </li>
+            <li class="list-group-item">
+              <h3 class="name">Nội dung</h3>
+              <p class="born">•	Ôn tập về nguyên tắc vận hành của hệ điều hành, nguyên tắc hoạt động của chương trình máy tính.</p>
+              <p class="born">•	Trải nghiệm và giải thích chương trình đơn giản trên hệ điều hành Windows</p>
+              <p class="born">•	Ôn tập về cách thức hoạt động của phần mềm trên nền tảng mạng Internet.</p>
+              <p class="born">•	Trải nghiệm và giải thích chương trình chạy tren nền tảng mạng Internet.</p>
+              <p class="born">•	Làm quen với công nghệ lập trình, ngôn ngữ lập trình Java.</p>
+              <p class="born">•	Phát triển ứng dụng trên Windows với thư viện SWT (của IBM)</p>
+              <p class="born">•	Làm quen với kiến trúc ứng dụng trên nền tảng Internet.</p>
+              <p class="born">•	Phát triển ứng dụng trên nền tảng Internet với công nghệ Java, Servlet; MySQL</p>
+              <p class="born">•	[Nâng cao – dành cho học viên có năng lực vượt trội]:</p>
+              <ul>
+                <li>Phát triển ứng dụng với Bootstrap, Spring, MySQL</li>
+                <li>Kiểm soát chất lượng mã nguồn bằng Unit Testing</li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <h3 class="name">Xem trước nội dung khóa Phát triển ứng dụng Java – cấp độ 2</h3>
+              <p class="born">•	Trải nghiệm và khai thác thư viện lập trình JDK.</p>
+              <p class="born">•	Ôn tập và trải nghiệm phương pháp lập trình hướng đối tượng (OOP).</p>
+              <p class="born">•	Nâng cao kỹ năng lập trình với ứng dụng trên Windows với thư viện SWT (của IBM).</p>
+              <p class="born">•	Nâng cao kỹ năng lập trình với ứng dụng trên nền tảng Internet với công nghệ Java, Servlet; MySQL.</p>
+              <p class="born">•	Phát triển ứng dụng Internet với Springboot, Boostrap, Thymeleaf.</p>
+              <p class="born">•	Làm quen với lập trình API Restful, micro services.</p>
+              <p class="born">•	[Nâng cao – dành cho học viên có năng lực vượt trội]:</p>
+              <ul>
+                <li>o	Phát triển ứng dụng với mô hình MVC.</li>
+                <li>o	Kiểm soát chất lượng mã nguồn bằng Checkstyle, Unit Testing.</li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <h3 class="name">Học phí khóa Phát triển ứng dụng Java – cấp độ 2</h3>
+              <p class="born">2.9 triệu /khóa (2 tháng).</p>
+              <p class="born">Cam kết đầu ra, học lại miễn phí trong khóa tiếp theo</p>
+            </li>
+            <li class="list-group-item">
+              <h3 class="name">Liên hệ: Lê Ngọc Thạch, điện thoại 0977548358; Facebook: facebook.com/ThachLN</h3>
+              <p class="born">Vài nét giới thiệu: 20 năm làm việc trong lĩnh vực phát triển phần mềm. Tốt nghiệp Đại Học ngành Khoa học Máy tính tại ĐHBK TPHCM. Tốt nghiệp Cao học ngành Khoa học Máy tính tại ĐH CNTT. Có 10 năm hỗ trợ, chia sẻ kinh nghiệm về phần mềm với hơn 20 trường đại học; giảng viên thỉnh giảng thêm cho các trường ĐH FPT, ĐH SPKT, ĐH Tôn Đức Thắng.</p>
+                 Trong đó có 10 năm hỗ trợ, chia sẻ kinh nghiệm với các trường đại học; giảng viên thỉnh giảng thêm cho các trường ĐH FPT, ĐH SPKT, ĐH Tôn Đức Thắng.</p>
+              <p class="born">Tác giả ebook "Chạm tới AI trong 10 ngày" được thới thiệu tại trang: <a href="https://ThachLN.github.io" target="_blank">https://ThachLN.github.io</a></p>
+            <li class="list-group-item">
+              <h3 class="name">Phương châm học tập và làm việc</h3>
+              <p class="born">Learning is to build your own assets (Học tập là để gầy dựng tài sản cho chính cá nhân bạn)</p>
+            </li>
+          </ul>
+           Tải PDF:
+            <iframe style="position: relative; height: 800px; width: 100%;"
+              src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://thachln.github.io/courses/java1/Khai_giang_16-11-2020_Bat_dau_phat_trien_ung_dung_voi_Java_Cap_do_1.pdf">
+            </iframe>
+				</div>
+			</div>
+		</div>
+  </div>
+
+</section>
+
+
+
+
+
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+
+    <div class="buy-now">
+      <a href="https://www.facebook.com/thachln/posts/2756601561019763" target="_blank" class="btn bg-gradient-directional-purple white btn-purple btn-glow px-2">Liên hệ qua Facebook</a>
+    </div>
+    
+    <footer class="footer footer-static footer-light navbar-border">
+      <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright  &copy; 2020 <a class="text-bold-800 grey darken-2" href="#" target="_blank">Lê Ngọc Thạch</a>.</span><span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Học tập là để gầy dựng tài sản cá nhân cho chính bạn! <i class="ft-heart pink"></i></span></p>
+    </footer>
+
+    <!-- BEGIN VENDOR JS-->
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/js/charts/raphael-min.js"></script>
+    <!-- <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/js/charts/morris.min.js"></script> -->
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/js/charts/chart.min.js"></script>
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js"></script>
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/js/extensions/moment.min.js"></script>
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/js/extensions/underscore-min.js"></script>
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/js/extensions/clndr.min.js"></script>
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/js/charts/echarts/echarts.js"></script>
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/js/extensions/unslider-min.js"></script>
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN ROBUST JS-->
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/js/core/app-menu.min.js"></script>
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/js/core/app.min.js"></script>
+    
+    <!-- END ROBUST JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <!-- <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/js/scripts/pages/dashboard-ecommerce.min.js"></script> -->
+    <!-- END PAGE LEVEL JS-->
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-144334984-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  <!-- End Google Analytics -->
+  </body>
 </html>
