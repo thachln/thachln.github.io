@@ -1,0 +1,58 @@
+{
+    "HeaderJson": {
+        "logo": "../../../app-assets/img/logo-dark.png",
+        "menuLanguage": [
+            {
+                "image": "../../../app-assets/img/flags/us.png",
+                "href": "javascript:;",
+                "name": "English",
+                "data": "en"
+            },
+            {
+                "image": "../../../app-assets/img/flags/es.png",
+                "href": "javascript:;",
+                "name": "Spanish",
+                "data": "es"
+            },
+            {
+                "image": "../../../app-assets/img/flags/pt.png",
+                "href": "javascript:;",
+                "name": "Portuguese",
+                "data": "pt"
+            },
+            {
+                "image": "../../../app-assets/img/flags/de.png",
+                "href": "javascript:;",
+                "name": "German",
+                "data": "de"
+            }
+        ]
+    },
+    "user": {
+        "name": "John Doe",
+        "Available": "Available",
+        "image": "../../../app-assets/img/portrait/small/avatar-s-1.png",
+        "dropdownUser": [
+            {
+                "item": "chat",
+                "href": "app-chat.html",
+                "icon":"ft-message-square mr-2"
+            },
+            {
+                "item": "Edit Profile",
+                "href": "page-user-profile.html",
+                "icon":"ft-edit mr-2"
+            },
+            {
+                "item": "My Inbox",
+                "href": "app-email.html",
+                "icon":"ft-mail mr-2"
+            },
+            {
+                "item": "Logout",
+                "href": "auth-login.html",
+                "icon":"ft-power mr-2"
+            }
+        ]
+    }
+}
