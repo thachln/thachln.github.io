@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<presentation guid="AFDBF1DD-1D8E-4402-80FD-469336D61AC2" version="0" availableOffline="1">
+<presentation guid="13BC0313-CFE2-435D-A9BF-05BDD2E24E3C" version="0" availableOffline="1">
 	<info>
 		<title>How to start a product</title>
 		<description/>
 	</info>
-	<files index="id3" thumbnail="id64" totalSize="53878170">
+	<files index="id3" thumbnail="id64" totalSize="53878162">
 		<file id="id0">lms.js</file>
 		<file id="id1">data/goodbye.html</file>
 		<file id="id3">index.html</file>
