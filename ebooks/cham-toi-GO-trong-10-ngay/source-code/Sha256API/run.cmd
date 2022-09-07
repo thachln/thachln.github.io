@@ -1,0 +1,1 @@
+go run sha256-api.go
