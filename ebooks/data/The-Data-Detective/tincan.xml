@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tincan xmlns="http://projecttincan.com/tincan.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<activities>
+		<activity id="ispring://pdfviewer/1DE4F6CC-9A17-7C35-538C-0D200D08189F" type="http://adlnet.gov/expapi/activities/course">
+			<name lang="und">Tim Harford - The Data Detective_ Ten Easy Rules to Make Sense of Statistics-Penguin Publishing Group (2021)</name>
+			<description lang="und"></description>
+			<launch>res/index.html</launch>
+		</activity>
+	</activities>
+</tincan>
