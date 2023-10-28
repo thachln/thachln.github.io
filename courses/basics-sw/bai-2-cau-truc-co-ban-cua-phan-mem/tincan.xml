@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tincan xmlns="http://projecttincan.com/tincan.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<activities>
+		<activity id="ispring://pdfviewer/44207CFC-E0CA-1CA7-45BC-6D405AF805BD" type="http://adlnet.gov/expapi/activities/course">
+			<name lang="und">Bài 2 - Cấu trúc cơ bản của phần mềm</name>
+			<description lang="und"></description>
+			<launch>res/index.html</launch>
+		</activity>
+	</activities>
+</tincan>

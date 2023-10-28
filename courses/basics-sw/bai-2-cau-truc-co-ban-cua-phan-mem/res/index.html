@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- Created with iSpring --><!-- 964 604 --><!--version 9.7.6.18006 --><!--type html --><!--mainFolder ./ --><!--content book -->
+<!--
+Copyright 2012 Mozilla Foundation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Adobe CMap resources are covered by their own copyright but the same license:
+
+    Copyright 1990-2015 Adobe Systems Incorporated.
+
+See https://github.com/adobe-type-tools/cmap-resources
+-->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="msapplication-tap-highlight" content="no"/>
+	<title>Bài 2 - Cấu trúc cơ bản của phần mềm</title>
+	<link rel="stylesheet" href="data/css/viewer.css"/>
+	<script src="data/js/viewer.js"></script>
+	
+	<script src=lms.js></script>
+	<script>
+		if (document.addEventListener) // IE9+
+		{
+			var book = "eNp1VN1u2zYUfhVCQLEbW5ATO3Z9R0l04kaRDEtOFgyFQMuMrUUmBZKKoUUB1jfpMGx9h/SywN7De5IdWaqNAosuKPI7h9/557OhU50xY2zY3z6n6Ax1kbN//atAWn57TVDyzx9ouX/9k6Nk//ULRflm//qFo+3+66et0TFyumZh+htTxviXZ0PBDjaD9wPz/Mw6fr3OqH9mWv2PHUNSvq5Vep3zjy9wVjTTYNoi9qQ/su3z3nDUH9ruaGhb790La4KHA/fCxWBpQ5UnEprdMqlSwY2xlgU7wDOq1E7IlTF+oJkCLO2NQP5sEDfG4XU8w2F4F8zd2J1iL7iMp/4t9qbuCfewTTzwItowlLdkiHHNJFuhHVUo5YmQkiXaRLOMUcUgOSWia5pyE1x7w853WlIznYi1QCJnHOlNqtBSiMfx2xQzDzvkKvBcMgeiY6AHfQf7zoHfoTxhWQN6AQbdw2/qn1zwBF2lfP3v7383asE1gLB0jJkdY9eN7SC4vsHz6/iK4MYYXtU3kA0Obql8VP+jG5GfI9C820A0pSh+kgxJdjDUQZrmECE73kfLQmvB6+gPx1qWFJBUrlHdRGbLfxkcnaZr0YDfDYZxhO26UX/0ycX34fHSipYtfBUs5id80xq4mfqLiJzwbVPCWhL40VWDhyD4QLlZTdjSrG6oNCucy3pXVh8KzmDJygoXa7MKWa7NKoDWqHzxZFYuS1o+P4iDReRNfQJsvoCMLDOGxANKBDQE162brU4bmvODbIYvydHTGWQJvTtA/uLGJvN3jdKcOMSPvPu6NsQFxV8LpREXu0a88PEtngKJR2Ib+z50R1u3e1GghHL0lLLdoREVEjwr0S7VG0TRHVsixeQTk+bbTNPII21FUF4ss1Rt6pkBBlFoCPYhSzkMVUbLJU0ekSryXEjd8N2TMCJzqN4xxJIpGBUoofECT4sUGkZuIsXWEXkJXXUc8Ac4MJnLlNePR79/Zg2didMlloO7PQcPu/2B7XQv3L41wJORNbBdsJiq+sJ6Br5MIclrSfXhHWk5JdgWkoWaataCL/8BTQGhEQ==";
+
+			document.addEventListener("DOMContentLoaded", function() {
+				PdfViewer.checkMobileIntegration(book);
+
+				var viewerInitCallback = function(viewer) {
+									(function(viewer){
+					var lms = iSpring.pdfviewer.LMS.instance();
+					lms.start(viewer);
+				
+					window.onunload = window.onbeforeunload = function()
+					{
+						lms.closeLms();
+					};
+				})(viewer)
+
+				};
+
+				var startupApplication = function(initViewerState) {
+					var fileOpenParams = {"type":"fileName","filePath":"data\/book.pdf"};
+					PdfViewer.open(fileOpenParams, document.body, book, viewerInitCallback, initViewerState);
+				};
+
+				(function(startupFunc) {
+					if (startupFunc)
+					{
+						startupFunc(startupApplication);
+					}
+					else
+					{
+						startupApplication();
+					}
+				})(				function(startupApplication) {
+					var params = {
+						docId: "44207CFC-E0CA-1CA7-45BC-6D405AF805BD",
+						flags: 0,
+						resumeMode: "always",  
+						tincan:
+						{
+							endPoint: "",
+							auth:
+							{
+								type: "",
+								key: "",
+								login: "",
+								password: "",
+								name: "",
+								email: ""
+							},
+							i18n:{
+				    "TINCAN_AUTH_AUTHENTICATION_ERROR_WINDOW_TEXT" : "Authentication failed",
+				    "TINCAN_AUTH_CONNECTION_ERROR_WINDOW_TEXT" : "Cannot connect to Learning Record Store (LRS)\nPlease check your internet connection and try again.",
+				    "TINCAN_AUTH_CONNECTION_ERROR_WINDOW_TITLE" : "Connection Problem",
+				    "TINCAN_AUTH_ERROR_WINDOW_CLOSE_BUTTON_CAPTION" : "Close",
+				    "TINCAN_AUTH_ERROR_WINDOW_RETRY_BUTTON_CAPTION" : "Try Again",
+				    "TINCAN_AUTH_ERROR_WINDOW_TITLE" : "Error",
+				    "TINCAN_AUTH_INVALID_EMAIL_WINDOW_BUTTON_CAPTION" : "OK",
+				    "TINCAN_AUTH_INVALID_EMAIL_WINDOW_TEXT" : "Please enter a valid email address.",
+				    "TINCAN_AUTH_LOGIN_WINDOW_BUTTON_CAPTION" : "Login",
+				    "TINCAN_AUTH_LOGIN_WINDOW_LOGIN_FIELD_CAPTION" : "Login:",
+				    "TINCAN_AUTH_LOGIN_WINDOW_PASSWORD_FIELD_CAPTION" : "Password:",
+				    "TINCAN_AUTH_USER_INFO_WINDOW_BUTTON_CAPTION" : "OK",
+				    "TINCAN_AUTH_USER_INFO_WINDOW_EMAIL_CAPTION" : "Email:",
+				    "TINCAN_AUTH_USER_INFO_WINDOW_NAME_CAPTION" : "Name:",
+				    "TINCAN_AUTH_WINDOW_SUBTITLE" : "Introduce yourself",
+				    "TINCAN_AUTH_WINDOW_TITLE" : "Learning Record Store"
+				}
+						},
+						scorm2004:
+						{
+							edition: ""
+						}
+					};
+				
+					var lms = iSpring.pdfviewer.LMS.create("tincan", params);
+					lms.initialize(startupApplication);
+				}
+);
+			});
+		}
+		else
+		{
+			location.replace("data/html5-unsupported.html");
+		}
+	</script>
+</head>
+<body></body>
+</html>
